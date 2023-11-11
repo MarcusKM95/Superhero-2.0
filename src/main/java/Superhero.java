@@ -73,4 +73,8 @@ public String getName(){
                 "Creationyear:" + " " + creationYear + "\n" +
                 "Superherostrength" + " " + superheroStrength;
     }
+
+    public String toCsvString() {
+    return name + "," + superheroName + "," + superheroPower + "," + creationYear + "," + superheroStrength;
+    }
 }
