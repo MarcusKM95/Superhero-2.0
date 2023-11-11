@@ -29,10 +29,12 @@ public class Database {
 
     public void deleteSuperhero(int i) {
         this.superheroList.remove(i);
+        this.toFile();
     }
 
     public void editSuperhero(int number, String name) {
         this.superheroList.get(number).setName(name);
+        this.toFile();
     }
 
     public void searchSuperhero(String search) {
@@ -46,7 +48,16 @@ public class Database {
 
     public void fileReader() {
         try {
-            Scanner fileScanner = new Scanner(new File("src/superherofile.csv"));
+            Scanner fileScanner = new Scanner(new File("superherofile.csv"));
+            while (fileScanner.hasNextLine()) {
+                String[] entry = fileScanner.nextLine().split(",");
+                String name = entry[0];
+                String superheroName = entry [1];
+                String superheroPower = entry [2];
+                int creationYear = Integer.parseInt(entry[3]);
+                int power = Integer.parseInt(entry[4]);
+                this.addSuperhero(new Superhero(name, superheroName, superheroPower, creationYear, power));
+            }
         } catch
         (FileNotFoundException e) {
             e.printStackTrace();

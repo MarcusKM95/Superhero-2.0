@@ -8,15 +8,6 @@ public class Userinterface {
 
    Scanner scanner = new Scanner(System.in);
 
-
-
-
-
-
-
-
-
-
         Database db = new Database();
 
         public void menu () {
@@ -31,6 +22,7 @@ public class Userinterface {
         }
         public void start() {
             boolean stopMenu = false;
+            db.fileReader();
 
             while (!stopMenu) {
 
