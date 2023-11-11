@@ -11,6 +11,7 @@ public class Userinterface {
         Database db = new Database();
 
         public void menu () {
+            System.out.println("\n");
             System.out.println("Superherodatabase:");
             System.out.println("1: Show all heroes");
             System.out.println("2: Add a superhero to the database");

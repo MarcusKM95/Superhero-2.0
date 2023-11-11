@@ -66,7 +66,7 @@ public String getName(){
 
     @Override
     public String toString() {
-        return "Superhero" + "\n" +
+        return "\n" + "Superhero" + "\n" +
                 "name:" + " " + name + "\n" +
                 "Superheroname:" + " " + superheroName + "\n" +
                 "Superheropower:" + " " + superheroPower + "\n" +
