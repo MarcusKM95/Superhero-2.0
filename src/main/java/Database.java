@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Test;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
@@ -69,7 +71,7 @@ public class Database {
             PrintStream writeToFile = new PrintStream(new File("superherofile.csv"));
             for (int i = 0; i < this.superheroList.toArray().length; i++) {
                 writeToFile.println(this.superheroList.get(i).toCsvString());
-                System.out.println("toFilemethod " + this.superheroList.get(i).toCsvString());
+                System.out.println("toFileMethod " + this.superheroList.get(i).toCsvString());
             }
         }
         catch (FileNotFoundException e) {
