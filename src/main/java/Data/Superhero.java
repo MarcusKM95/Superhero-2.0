@@ -1,3 +1,5 @@
+package Data;
+
 public class Superhero {
 
     private String name;
@@ -66,7 +68,7 @@ public String getName(){
 
     @Override
     public String toString() {
-        return "\n" + "Superhero" + "\n" +
+        return "\n" + "Data.Superhero" + "\n" +
                 "name:" + " " + name + "\n" +
                 "Superheroname:" + " " + superheroName + "\n" +
                 "Superheropower:" + " " + superheroPower + "\n" +

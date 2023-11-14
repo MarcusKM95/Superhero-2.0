@@ -1,3 +1,5 @@
+package comparator;
+import Data.Superhero;
 import java.util.Comparator;
 
 public class Superheronamecomparator implements Comparator<Superhero> {

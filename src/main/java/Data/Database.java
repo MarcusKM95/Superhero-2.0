@@ -1,3 +1,5 @@
+package Data;
+
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -40,10 +42,15 @@ public class Database {
     }
 
     public void searchSuperhero(String search) {
+        boolean found = false;
         for (Superhero hero : this.superheroList) {
             if (hero.getName().toLowerCase().contains(search.toLowerCase()) || hero.getSuperheroName().contains(search.toLowerCase())) {
                 System.out.println(hero.toString());
+                found = true;
             }
+        }
+        if(!found){
+            System.out.println("No hero found");
         }
 
     }

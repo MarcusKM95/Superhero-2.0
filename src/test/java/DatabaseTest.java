@@ -1,5 +1,6 @@
+import Data.Database;
+import Data.Superhero;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 
@@ -39,7 +40,7 @@ public class DatabaseTest {
 
     // Expected output/result
 
-    String expectedOutput = "toFilemethod Spiderman,Peter Parker,Web-slinging,1962,85\n0 \nSuperhero\nname: Spiderman\nSuperheroname: Peter Parker\nSuperheropower: Web-slinging\nCreationyear: 1962\nSuperherostrength 85\n";
+    String expectedOutput = "toFilemethod Spiderman,Peter Parker,Web-slinging,1962,85\n0 \nData.Superhero\nname: Spiderman\nSuperheroname: Peter Parker\nSuperheropower: Web-slinging\nCreationyear: 1962\nSuperherostrength 85\n";
 
     assertEquals(expectedOutput,outContent.toString());
 }
